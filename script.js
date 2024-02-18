@@ -49,6 +49,39 @@ for(const btn of buttons){
 }
 
 
+const applyCoupon = document.getElementById('apply-coupon');
+applyCoupon.addEventListener('click', function(){
+    // console.log('clicked')
+    const couponCode1= document.getElementById('coupon1').innerText;
+    // console.log(couponCode1);
+    const couponCode2 = document.getElementById('coupon2').innerText;
+    // console.log(couponCode2);
+    const couponCode = document.getElementById('coupon-code').value;
+    const couponApplyField=document.getElementById('coupon-apply-field');
+    if(couponCode ==="NEW15"){
+        const discountAmount = totalPrice * 0.15;
+        const grandTotal = totalPrice - discountAmount;
+        setTextElementValueById('grand-total-calc', grandTotal);
+        document.getElementById('coupon-code').value = " ";   
+    }
+    else if (couponCode === "Couple 20"){
+        const discountAmount = totalPrice * 0.20;
+        const grandTotal = totalPrice - discountAmount;
+        setTextElementValueById('grand-total-calc', grandTotal);
+        document.getElementById('coupon-code').value = " ";
+    }
+    else{
+        alert("Invalid Coupon Code");
+        setTextElementValueById('grand-total-calc', totalPrice);
+        document.getElementById('coupon-code').value = " ";
+        
+    }
+    
+    
+})
+
+
+
 
 
 function setTextElementValueById(id, value){

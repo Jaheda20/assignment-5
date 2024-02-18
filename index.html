@@ -103,7 +103,7 @@
                     </div>
                     
                     <div class="h-56 w-60 bg-[#FFBF0F] rounded-r-3xl text-center flex flex-col items-center justify-center gap-2">
-                        <h2 class="font-bold text-3xl text-[030712]">NEW15</h2>
+                        <h2 id="coupon1" class="font-bold text-3xl text-[030712]">NEW15</h2>
                         <p class="font-medium text-lg text-[#03071266]">Coupon Code</p>
                     </div>
                     <div class="lg:-translate-x-64 -translate-x-48">
@@ -119,7 +119,7 @@
                     </div>
                     
                     <div class="h-56 w-60 bg-[#F78C9C] rounded-r-3xl text-center flex flex-col items-center justify-center gap-2">
-                        <h2 class="font-bold text-3xl text-[030712]">Couple 20</h2>
+                        <h2 id="coupon2" class="font-bold text-3xl text-[030712]">Couple 20</h2>
                         <p class="font-medium text-lg text-[#03071266]">Coupon Code</p>
                     </div>
                     <div class="lg:-translate-x-64 -translate-x-48">
@@ -155,7 +155,7 @@
                         </div>
                         <div class="flex space-x-2 bg-[#1DD1001a] p-3 rounded-lg">
                             <img class="w-7 h-7" src="images/seat-green.png" alt="">
-                            <p id="total-seats" class="font-inter font-medium text-lg text-[#1DD100]">40</p>
+                            <p id="total-seats" class="font-inter font-medium text-lg text-[#1DD100]">32</p>
                             <p class="font-inter font-medium text-lg text-[#1DD100]">Seats left</p>      
                         </div>  
                     </div>
@@ -305,7 +305,7 @@
                         <div>
                             <table id="booking-info" class="table w-full">
                                 <tr class="border-b-2 border-dashed font-inter font-medium text-[#030712]">
-                                    <th>Seat<span Seat id="selected-seats" class="bg-[#1DD100] w-6 h-3">0</span></th>
+                                    <th>Seat<span Seat id="selected-seats" class="bg-[#1DD100] w-6 h-3 text-white">0</span></th>
                                     <th>Class</th>
                                     <th>Price</th>
                                 </tr>
@@ -315,18 +315,14 @@
                                 <p>BDT <span id="total-price-calc"></span></p>
                             </div>                        
                             
-                            <div class="flex items-center mt-3">
+                            <div id="coupon-field" class="flex items-center mt-3">
                                 <input id="coupon-code" class="input w-96 relative p-7 font-inter font-semibold text-sm" placeholder="Have any coupon?"/>
                                 <button id="apply-coupon" class="btn rounded-lg px-6 absolute right-40 bg-[#1DD100] text-white font-inter font-semibold">Apply</button>
                               </div>
-                              <div class="mt-4">
-                                <table class="table w-full border-none">
-                                    <tr class="font-inter font-medium text-[#030712]"> 
-                                    <td colspan="2">Grand Total</td>                                  
-                                    <td></td>
-                                  </tr>
+                              <div class="mt-2 font-inter font-medium text-[#030712] flex items-center gap-40">
+                                <p>Grand Total</p>
+                                <p>BDT <span id="grand-total-calc"></span></p>
                                 
-                                </table>
                             </div>                            
                         </div>
                     </div>
