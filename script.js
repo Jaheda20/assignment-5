@@ -1,4 +1,5 @@
 let seatCount = 0;
+let totalPrice = 0;
 
 const buttons = document.getElementsByClassName('economy');
 
@@ -26,6 +27,10 @@ for(const btn of buttons){
         cell1.innerText=seatName;
         cell2.innerText=seatClass;
         cell3.innerText=price;
+
+        // total price Calculation
+        totalPrice += price;
+        document.getElementById('total-price-calc').innerText=totalPrice;
         
     })
     
