@@ -28,6 +28,18 @@ for(const btn of buttons){
         cell2.innerText=seatClass;
         cell3.innerText=price;
 
+        e.target.setAttribute("disabled", true);
+
+        if(bookedSeats > 0){
+            seatCount ++
+            // console.log('no of seatCount is:', seatCount);
+        }
+        if(seatCount >= 4 ){
+            alert('You have reached max selection');
+            disableAllButtons();
+            return;
+        }
+
         // total price Calculation
         totalPrice += price;
         document.getElementById('total-price-calc').innerText=totalPrice;
@@ -43,6 +55,12 @@ function setTextElementValueById(id, value){
     const element = document.getElementById(id);
     element.innerText = value;
 
+}
+
+function disableAllButtons(){
+    for(const btn of buttons){
+        btn.setAttribute("disabled", true);
+    }
 }
 
 
