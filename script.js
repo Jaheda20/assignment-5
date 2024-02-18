@@ -12,6 +12,20 @@ for(const btn of buttons){
         const remainingSeats = parseInt(totalSeats.innerText)-1;
         setTextElementValueById('selected-seats', bookedSeats);
         setTextElementValueById('total-seats', remainingSeats);
+
+        const seatName = btn.innerText;
+        const seatClass = 'Economy';
+        const ticketPrice = document.getElementById("ticket-price");
+        const price = parseInt(ticketPrice.innerText);
+        // console.log(seatName, seatClass, price)
+        const table = document.getElementById('booking-info');
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+        cell1.innerText=seatName;
+        cell2.innerText=seatClass;
+        cell3.innerText=price;
         
     })
     

@@ -301,30 +301,24 @@
                     <div class="font-semibold text-2xl text-[#030712]">Select Your Seat</div>
                     <hr class="border-dashed">
                     <!-- seat booking info -->
-                    <div class="p-5 max-w-md h-72 bg-[#F7F8F8] rounded-2xl">
+                    <div class="p-5 max-w-md bg-[#F7F8F8] rounded-2xl">
                         <div>
-                            <table class="table w-full">
+                            <table id="booking-info" class="table w-full">
                                 <tr class="border-b-2 border-dashed font-inter font-medium text-[#030712]">
                                     <th>Seat<span Seat id="selected-seats" class="bg-[#1DD100] w-6 h-3">0</span></th>
                                     <th>Class</th>
                                     <th>Price</th>
                                 </tr>
-                                <tr class="border-none">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                  </tr> 
-                                  <tr class="border-none">
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                  </tr>                                 
-                                 <tr class="font-inter font-medium text-[#030712] border-t-2"> 
-                                      <td colspan="2">Total Price</td>                              
+                            </table>
+                            <div class="mt-2">
+                                <table>
+                                <tr class="font-inter font-medium text-[#030712]"> 
+                                      <td colspan="2">Total Price</td>                                     
                                       <td></td>
                                     </tr>
-                                  </tbody>
+                                
                                 </table>
+                            </div>                          
                             
                             <div class="flex items-center mt-3">
                                 <input id="coupon-code" class="input w-96 relative p-7 font-inter font-semibold text-sm" placeholder="Have any coupon?"/>
@@ -332,12 +326,11 @@
                               </div>
                               <div class="mt-4">
                                 <table class="table w-full border-none">
-                                    <tbody>
                                     <tr class="font-inter font-medium text-[#030712]"> 
                                     <td colspan="2">Grand Total</td>                                  
                                     <td></td>
                                   </tr>
-                                </tbody>
+                                
                                 </table>
                             </div>                            
                         </div>
