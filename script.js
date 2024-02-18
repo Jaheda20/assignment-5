@@ -62,17 +62,18 @@ applyCoupon.addEventListener('click', function(){
         const discountAmount = totalPrice * 0.15;
         const grandTotal = totalPrice - discountAmount;
         setTextElementValueById('grand-total-calc', grandTotal);
-        document.getElementById('coupon-code').value = " ";   
+        document.getElementById('coupon-code').value = " ";  
+        couponApplyField.style.display='none'; 
     }
     else if (couponCode === "Couple 20"){
         const discountAmount = totalPrice * 0.20;
         const grandTotal = totalPrice - discountAmount;
         setTextElementValueById('grand-total-calc', grandTotal);
         document.getElementById('coupon-code').value = " ";
+        couponApplyField.style.display='none';
     }
     else{
         alert("Invalid Coupon Code");
-        setTextElementValueById('grand-total-calc', totalPrice);
         document.getElementById('coupon-code').value = " ";
         
     }
