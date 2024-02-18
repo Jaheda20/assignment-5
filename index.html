@@ -342,7 +342,23 @@
                             <br><br>
                             <input type="email" name="" id="email-id" placeholder="Enter your email address" class="border-2 rounded-xl w-full p-6 font-inter">
                         </form>
-                        <button id="next-button" class="btn btn-wide w-full bg-[#1DD100] text-white font-extrabold text-xl">Next</button>
+                        <button onclick="my_modal_1.showModal()" id="next-button" class="btn btn-wide w-full bg-[#1DD100] text-white font-extrabold text-xl">Next</button>
+                        <!-- Open the modal using ID.showModal() method -->
+                        <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+                        <dialog id="my_modal_1" class="modal">
+                            <div class="modal-box bg-white flex flex-col items-center justify-center space-y-8 p-10">
+                                <img src="images/success.png" alt="">
+                                <h3 class="font-bold text-3xl text-[#1DD100] text-center">Congratulations!!</h3>
+                                <p class="text-center font-bold">Thank you for your purchase. We are working hard to find the best service and deals for you. </p>
+                                <p>Shortly you will get a confirmation in your email.</p>
+                                <div class="modal-action">
+                                <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn btn-wide w-full bg-[#1DD100] text-white font-extrabold text-xl px-10">Continue</button>
+                                 </form>
+                                </div>
+                            </div>
+                        </dialog>
                     </div>
                     <div class="flex justify-evenly font-inter text-[#03071299]">
                         <p class="underline">Terms & Conditions</p>
